@@ -1,5 +1,5 @@
 '''Use Dynamic Programming to get the max sums between 0 to last - 1 and between 1 to last.
-The result is max of these two.'''
+The result is max of these two. It needs O(4n) time, should be reduced.'''
 class Solution(object):
     def rob(self, nums):
         """
