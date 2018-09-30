@@ -9,7 +9,7 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        if not s or s[0] == "0":
+        '''if not s or s[0] == "0":
             return 0
         dp = [0 for _ in range(len(s) + 1)]
         dp[0] = 1
@@ -20,4 +20,17 @@ class Solution(object):
                 dp[i] = dp[i-1]
             if i > 1 and (s[i - 2] == '1' or (s[i-2] == '2' and s[i-1] <= '6')):
                 dp[i] += dp[i-2]
-        return dp[len(dp) - 1]
+        return dp[len(dp) - 1]'''
+        if not s or s[0] == '0':
+            return 0
+        c1 = 1
+        c2 = 1
+        for i in range(1,len(s)):
+            if s[i] == '0':
+                c1 = 0
+            if s[i-1] == '1' or (s[i-1] == '2' and s[i] <= '6'):
+                c1 = c1 + c2
+                c2 = c1 - c2
+            else:
+                c2 = c1
+        return c1
