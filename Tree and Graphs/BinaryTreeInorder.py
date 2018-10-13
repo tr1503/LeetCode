@@ -11,6 +11,15 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
+        '''res = []
+        def helper(root):
+            if root:
+                helper(root.left)
+                res.append(root.val)
+                helper(root.right)
+        helper(root)
+        return res'''
+        
         res = []
         stack = []
         while len(stack)!= 0 or root:
