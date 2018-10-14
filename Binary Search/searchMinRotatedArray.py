@@ -5,8 +5,10 @@ class Solution:
         :rtype: int
         """
         def helper(nums,lo,hi):
+            #Only 1 or 2 elements in this array
             if lo + 1 >= hi:
                 return min(nums[lo],nums[hi])
+            #Sorted Array
             if nums[lo] < nums[hi]:
                 return nums[lo]
             mid = lo + (hi - lo) // 2
