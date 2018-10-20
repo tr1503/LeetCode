@@ -9,7 +9,7 @@ class Solution:
         if S == T:
             return 0
         m = {}
-        #Use hashmap to build a bus->stops, like bus1 has some stops, bus2 has some stops
+        #Use hashmap to build a stop -> buses, like one stop has some buses stop at here.
         for i in range(len(routes)):
             for stop in routes[i]:
                 if stop in m:
