@@ -7,10 +7,12 @@ class Solution(object):
         :rtype: int
         """
         #Newton method:
-        if x == 0 or x == 1:
+        if x == 0:
             return x
-        guess = x / 2
-        for i in range(19):
+        guess = 1
+        lastGuess = 0
+        while guess != lastGuess:
+            lastGuess = guess
             guess = (guess + x / guess) / 2.0
         return int(guess)
         #Binary Search:
