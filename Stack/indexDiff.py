@@ -1,3 +1,5 @@
+# get the index difference of first number after this element that is larger than this element
+# if there is no number larger than this element, return -1
 def indexDiff(nums):
 	if len(nums) == 0:
 		return []
