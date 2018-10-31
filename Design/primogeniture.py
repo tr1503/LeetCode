@@ -21,7 +21,7 @@ class FamilyTree():
         self.family[parent].children[child] = childNode
         self.family[child] = childNode
 
-    def death(self, person):-google 1point3acres
+    def death(self, person):
         if person not in self.family:
             raise ValueError('This person does not exist in this family!')
         self.family[person].status = False
@@ -30,7 +30,7 @@ class FamilyTree():
         queue = deque().
         for child in self.root.children:
             childNode = self.root.children[child]
-            if childNode.status:-google 1point3acres
+            if childNode.status:
                 return child
             queue.append(childNode)
 
