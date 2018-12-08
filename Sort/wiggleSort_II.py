@@ -21,7 +21,8 @@ class Solution:
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        n = len(nums)
+        # The way use find Kth largest number and get the new index to put each element to correct position
+        '''n = len(nums)
         if n < 2:
             return
         median = self.findKthLargest(nums, (len(nums) + 1) // 2)
@@ -41,4 +42,8 @@ class Solution:
                 nums[index1], nums[index2] = nums[index2], nums[index1]
                 right -= 1
             else:
-                i += 1
+                i += 1'''
+        # Quick way solved by sort
+        nums.sort()
+        half = len(nums[::2])
+        nums[::2], nums[1::2] = nums[:half][::-1], nums[half:][::-1]
