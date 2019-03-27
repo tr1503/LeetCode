@@ -1,3 +1,4 @@
+// Time is O(logx), space is O(1).
 class Solution {
     public int reverse(int x) {
         int res = 0;
