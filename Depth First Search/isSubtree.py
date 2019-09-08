@@ -1,5 +1,5 @@
 # Use dfs to iterate two trees at same time and compare their nodes
-# time is O(n * m), space is O(n * m)
+# time is O(n * m), space is O(n)
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
